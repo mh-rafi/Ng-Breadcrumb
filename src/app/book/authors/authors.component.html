@@ -1,0 +1,17 @@
+<div fxLayout="row" fxLayoutWrap="wrap">
+    <div class="p-333" fxFlex="100" fxFlex.gt-sm="25" *ngFor="let a of authors">
+      <md-card class="text-center">
+        <md-card-content>
+            <img class="rounded" [src]="a.photo" alt="">
+            <h3>{{a.name}}</h3>
+        </md-card-content>
+        <md-divider></md-divider>
+        <md-card-actions>
+          <button 
+          color="primary" 
+          md-raised-button
+          [routerLink]="['/authors', a.slug]">View Books</button>
+        </md-card-actions>
+      </md-card>
+    </div>
+</div>
